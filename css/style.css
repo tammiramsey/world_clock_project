@@ -64,3 +64,11 @@ footer {
     font-size: 18px;
     color: rgba(0,0,0,0.6);
 }
+
+footer strong:hover{
+    font-size: 24px;
+}
+
+footer a:hover{
+    font-size: larger;
+}
