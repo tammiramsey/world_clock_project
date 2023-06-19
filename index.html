@@ -14,34 +14,36 @@
       <div class="container"> 
         <h1>World Clocks</h1>
 
-        <select>
+        <select id="city">
             <option value="">Select a city...</option>
-            <option value="">Berlin 🇩🇪</option>
-            <option value="">New York 🇺🇸</option>
-            <option value="">Tokyo 🇯🇵</option>
-            <option value="">London 🇬🇧</option>
+            <option value="Europe/Berlin">Berlin 🇩🇪</option>
+            <option value="America/New_York">New York 🇺🇸</option>
+            <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
+            <option value="Europe/London">London 🇬🇧</option>
 
         </select>
 
-        <div class="city" id="los_angeles">
-            <div>
-                <h2>Los Angeles 🇺🇸</h2>
-                <div class="date"></div>
+        <div id="cities">
+            <div class="city" id="los_angeles">
+                <div>
+                    <h2>Los Angeles 🇺🇸</h2>
+                    <div class="date"></div>
+                </div>
+                <div>
+                    <div class="time"></div>
+                </div>
             </div>
-            <div>
-                <div class="time"></div>
+            <div class="city" id="paris">
+                <div>
+                    <h2>Paris 🇫🇷</h2>
+                    <div class="date"></div>
+                </div>
+                <div>
+                    <div class="time"></div>
+                </div>
             </div>
-        </div>
-        <div class="city" id="paris">
-            <div>
-                <h2>Paris 🇫🇷</h2>
-                <div class="date"></div>
-            </div>
-            <div>
-                <div class="time"></div>
-            </div>
-        </div>
-    </div> 
+        </div> 
+    </div>
         <footer>This project was coded by <strong>Tammi Ramsey 👩🏼‍💻</strong> and is open sourced
             <a href="https://github.com/tammiramsey/world_clock_project" target="_blank"> on Github</a> 
         </footer>
