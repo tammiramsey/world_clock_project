@@ -4,14 +4,14 @@ function updateTime() {
   let losAngelesElement = document.querySelector("#los_angeles");
   if (losAngelesElement) {
     let losAngelesDateElement =
-        losAngelesElement.querySelector("#los_angeles .date");
+      losAngelesElement.querySelector("#los_angeles .date");
     let losAngelesTimeElement =
-        losAngelesElement.querySelector("#los_angeles .time");
+      losAngelesElement.querySelector("#los_angeles .time");
     let losAngelesTime = moment().tz("America/los_Angeles");
 
     losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
     losAngelesTimeElement.innerHTML = losAngelesTime.format(
-        "h:mm:ss [<small>]A[</small>]"
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
 
@@ -19,21 +19,24 @@ function updateTime() {
 
   let parisElement = document.querySelector("#paris");
   if (parisElement) {
-  let parisDateElement = parisElement.querySelector("#paris .date");
-  let parisTimeElement = parisElement.querySelector("#paris .time");
-  let parisTime = moment().tz("Europe/Paris");
+    let parisDateElement = parisElement.querySelector("#paris .date");
+    let parisTimeElement = parisElement.querySelector("#paris .time");
+    let parisTime = moment().tz("Europe/Paris");
 
-  parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
-  parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
-}
+    parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
+    parisTimeElement.innerHTML = parisTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 updateTime();
 setInterval(updateTime, 1000);
 
+
 function updateCity(event) {
   let cityTimeZone = event.target.value;
-  if(cityTimeZone === "current"){
+  if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
   }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
