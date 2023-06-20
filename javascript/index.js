@@ -28,6 +28,20 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+
+  //moscow date/time
+
+  let moscowElement = document.querySelector("#moscow");
+  if (moscowElement) {
+    let moscowDateElement = moscowElement.querySelector("#moscow .date");
+    let moscowTimeElement = moscowElement.querySelector("#moscow .time");
+    let moscowTime = moment().tz("Europe/Moscow");
+
+    moscowDateElement.innerHTML = moscowTime.format("MMMM Do YYYY");
+    moscowTimeElement.innerHTML = moscowTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 updateTime();
